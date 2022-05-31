@@ -1,0 +1,40 @@
+## DB Università
+
+## Dipartimenti
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+nome: VARCHAR (100) NOTNULL
+
+## Corsi di laurea
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+nome: VARCHAR (50) NOTNULL
+
+# Corso
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+nome: VARCHAR (200)
+data_inizio: DATE
+data_fine: DATE
+
+## Insegnanti
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+nome: VARCHAR (50) NULL
+cognome: VARCHAR (50) NULL
+email: VARCHAR (200) NULL
+materia: VARCHAR (100) NULL
+
+## Studente
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+nome: VARCHAR (50) NULL
+cognome: VARCHAR (50) NULL
+email: VARCHAR (200) NULL
+anno: YEAR NULL
+numero_crediti: TINYINT NULL
+
+## appelli esame
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+data: DATE NULL
+
+
+## esame studente
+id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+voto: VARCHAR(2) null
+numero_crediti: TINYINT NULL
