@@ -1,12 +1,16 @@
 ## DB Università
 
 ## Dipartimenti
-id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
+id: BIGINT PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
 nome: VARCHAR (100) NOTNULL
+sito:
+email:
+
 
 ## Corsi di laurea
 id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
 nome: VARCHAR (50) NOTNULL
+livello:
 
 # Corso
 id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
@@ -19,6 +23,7 @@ id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
 nome: VARCHAR (50) NULL
 cognome: VARCHAR (50) NULL
 email: VARCHAR (200) NULL
+numero_telefono:
 materia: VARCHAR (100) NULL
 
 ## Studente
@@ -27,14 +32,14 @@ nome: VARCHAR (50) NULL
 cognome: VARCHAR (50) NULL
 email: VARCHAR (200) NULL
 anno: YEAR NULL
-numero_crediti: TINYINT NULL
+
 
 ## appelli esame
 id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
 data: DATE NULL
 
 
-## esame studente
+## voti
 id: PK NOTNULL UNIQUE AUTOINCREMENTAL INDEX
 voto: VARCHAR(2) null
 numero_crediti: TINYINT NULL
